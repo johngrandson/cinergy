@@ -65,6 +65,7 @@
     "@types/core-js": "^0.9.43",
     "@types/jasmine": "^2.6.0",
     "@types/node": "^8.0.32",
+    "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "^3.2.0",
     "jasmine-core": "^2.8.0",
     "jasmine-spec-reporter": "^4.2.1",
