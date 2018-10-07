@@ -11,8 +11,8 @@ import { Task } from './taskboard.model';
 })
 export class TaskboardComponent  {
 
-  @ViewChild('deviceTitle') title: ElementRef;
-  @ViewChild('deviceMessage') description: ElementRef;
+  @ViewChild('deviceName') name: ElementRef;
+  @ViewChild('deviceDescription') description: ElementRef;
 
   public devices: Task[];
 
@@ -21,16 +21,16 @@ export class TaskboardComponent  {
   }
 
   onAddDevice() {
-    if (this.description.nativeElement.value !== '' && this.title.nativeElement.value !== '') {
+    if (this.description.nativeElement.value !== '' && this.name.nativeElement.value !== '') {
       this.taskBoardService.addNewDevice(
-          this.title.nativeElement.value,
+          this.name.nativeElement.value,
           this.description.nativeElement.value
         );
       this.devices = this.taskBoardService.getAllDevices();
     }
-    this.title.nativeElement.value = '';
+    this.name.nativeElement.value = '';
     this.description.nativeElement.value = '';
-    this.title.nativeElement.focus();
+    this.name.nativeElement.focus();
   }
 
 }

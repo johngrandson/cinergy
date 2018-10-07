@@ -169,6 +169,10 @@
     overflow: hidden;
   }
 
+  .min-height {
+    min-height: 70px;
+  }
+
   &.card-inverse{
       .card-blockquote .blockquote-footer, .card-link, .card-subtitle, .card-text, .card-title, .card-footer,
       a, a:hover,label, span, .form-group:hover,div,input{

@@ -4,8 +4,6 @@ import { Task } from './taskboard.model';
 @Injectable()
 export class TaskBoardService {
 
-    constructor() { }
-
     public devices: Task[] = [
         new Task(
                 'Sensor',
@@ -13,9 +11,11 @@ export class TaskBoardService {
             )
     ];
 
-    addNewDevice(title: string, description: string) {
+    constructor() {}
+
+    addNewDevice(name: string, description: string) {
         this.devices.push(new Task(
-            title,
+            name,
             description,
         ))
     }
