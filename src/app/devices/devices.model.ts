@@ -1,4 +1,4 @@
-export class Task {
+export class Device {
     public name: string;
     public description: string;
 

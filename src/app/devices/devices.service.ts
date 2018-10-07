@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Task } from './taskboard.model';
+import { Device } from './devices.model';
 
 @Injectable()
-export class TaskBoardService {
+export class DevicesService {
 
-    public devices: Task[] = [
-        new Task(
+    public devices: Device[] = [
+        new Device(
                 'Sensor',
                 'Monitoramento de equipamentos eletro-eletrônicos.',
             )
@@ -14,7 +14,7 @@ export class TaskBoardService {
     constructor() {}
 
     addNewDevice(name: string, description: string) {
-        this.devices.push(new Task(
+        this.devices.push(new Device(
             name,
             description,
         ))

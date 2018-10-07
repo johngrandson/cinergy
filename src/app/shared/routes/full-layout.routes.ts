@@ -60,8 +60,8 @@ export const Full_ROUTES: Routes = [
     loadChildren: './inbox/inbox.module#InboxModule'
   },
   {
-    path: 'taskboard',
-    loadChildren: './taskboard/taskboard.module#TaskboardModule'
+    path: 'devices',
+    loadChildren: './devices/devices.module#DevicesModule'
   },
   {
     path: 'player',

@@ -1,32 +1,32 @@
 import { Component, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
-import { TaskBoardService } from './taskboard.service';
-import { Task } from './taskboard.model';
+import { DevicesService } from './devices.service';
+import { Device } from './devices.model';
 
 @Component({
-  selector: 'app-taskboard',
-  templateUrl: './taskboard.component.html',
-  styleUrls: ['./taskboard.component.scss'],
-  providers: [TaskBoardService],
+  selector: 'app-devices',
+  templateUrl: './devices.component.html',
+  styleUrls: ['./devices.component.scss'],
+  providers: [DevicesService],
   encapsulation: ViewEncapsulation.None
 })
-export class TaskboardComponent  {
+export class DevicesComponent  {
 
   @ViewChild('deviceName') name: ElementRef;
   @ViewChild('deviceDescription') description: ElementRef;
 
-  public devices: Task[];
+  public devices: Device[];
 
-  constructor(private elRef: ElementRef, private taskBoardService: TaskBoardService) {
-    this.devices = taskBoardService.devices
+  constructor(private elRef: ElementRef, private devicesService: DevicesService) {
+    this.devices = devicesService.devices
   }
 
   onAddDevice() {
     if (this.description.nativeElement.value !== '' && this.name.nativeElement.value !== '') {
-      this.taskBoardService.addNewDevice(
+      this.devicesService.addNewDevice(
           this.name.nativeElement.value,
           this.description.nativeElement.value
         );
-      this.devices = this.taskBoardService.getAllDevices();
+      this.devices = this.devicesService.getAllDevices();
     }
     this.name.nativeElement.value = '';
     this.description.nativeElement.value = '';

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TaskboardComponent } from './taskboard.component';
+import { DevicesComponent } from './devices.component';
 
 const routes: Routes = [
   {
     path: '',
-     component: TaskboardComponent,
+     component: DevicesComponent,
     data: {
-      title: 'Taskboard'
+      title: 'Devices'
     },
 
   }
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class TaskboardRoutingModule { }
+export class DevicesRoutingModule { }
