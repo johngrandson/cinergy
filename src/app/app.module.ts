@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { ToastModule, ToastOptions } from 'ng2-toastr/ng2-toastr';
 import { AgmCoreModule } from '@agm/core';
 
+import { NouisliderModule } from 'ng2-nouislider';
+
 import { AppComponent } from './app.component';
 import { ContentLayoutComponent } from './layouts/content/content-layout.component';
 import { FullLayoutComponent } from './layouts/full/full-layout.component';
@@ -31,7 +33,8 @@ import * as $ from 'jquery';
         NgbModule.forRoot(),
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyBr5_picK8YJK7fFR2CPzTVMj6GG1TtRGo'
-        })
+        }),
+        NouisliderModule
     ],
     providers: [
         // Toastr providers
