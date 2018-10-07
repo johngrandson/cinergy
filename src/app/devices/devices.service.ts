@@ -6,12 +6,12 @@ export class DevicesService {
 
     public devices: Device[] = [
         new Device(
-                'Sensor',
-                'Monitoramento de equipamentos eletro-eletrônicos.',
-            )
+            'Sensor',
+            'Monitoramento de equipamentos eletro-eletrônicos.',
+        )
     ];
 
-    constructor() {}
+    constructor() { }
 
     addNewDevice(name: string, description: string) {
         this.devices.push(new Device(
