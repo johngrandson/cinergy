@@ -6,11 +6,15 @@ import { DevicesComponent } from './devices.component';
 const routes: Routes = [
   {
     path: '',
-     component: DevicesComponent,
-    data: {
-      title: 'Devices'
-    },
-
+    children: [
+      {
+        path: 'create',
+        component: DevicesComponent,
+        data: {
+          title: 'Devices'
+        }
+      }
+    ]
   }
 ];
 
