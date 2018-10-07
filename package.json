@@ -10,6 +10,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "engines": {
+    "node": "8.10.0",
+    "npm": "3.5.2"
+  },
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.1",
